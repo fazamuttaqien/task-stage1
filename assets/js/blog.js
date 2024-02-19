@@ -69,7 +69,10 @@ function renderBlog() {
       <a href="./blog-details.html?id=${index}">
         <img src="./assets/image/blog-images/image-1.jpg" alt="" />
         <p class="card-title">${dataBlogs[index].title}</p>
-        <p class="card-duration">duration : 3 months</p>
+        <p class="card-duration">duration : ${getFullDate(
+          dataBlogs[index].valueStartDate,
+          dataBlogs[index].valueEndDate
+        )}</p>
         <div class="card-content">
           <p>${dataBlogs[index].description}</p>
         </div>
@@ -83,6 +86,49 @@ function renderBlog() {
       </div>
     </div>
     `;
+  }
+}
+
+function getFullDate(startDate, endDate) {
+  let nowDate = new Date();
+  let now = {
+    hours: 24 - nowDate.getHours(),
+    minutes: 60 - nowDate.getMinutes(),
+    seconds: 60 - nowDate.getSeconds(),
+  };
+
+  let start = {
+    years: startDate.getFullYear(),
+    months: startDate.getMonth(),
+    days: startDate.getDate(),
+  };
+
+  let end = {
+    years: endDate.getFullYear(),
+    months: endDate.getMonth(),
+    days: endDate.getDate(),
+  };
+
+  let distance = {
+    years: end.years - start.years,
+    months: end.months - start.months,
+    days: end.days - start.days,
+  };
+
+  if (distance.years > 0) {
+    return `${distance.years} years`;
+  } else if (distance.months > 0) {
+    return `${distance.months} months`;
+  } else if (distance.days > 0) {
+    return `${distance.days} days`;
+  } else if (now.hours > 0) {
+    return `${now.hours} hours ${now.minutes} minutes ${now.seconds} seconds`;
+  } else if (now.minutes > 0) {
+    return `${now.minutes} minutes`;
+  } else if (now.seconds > 0) {
+    return `${now.seconds} seconds`;
+  } else {
+    return `timeout`;
   }
 }
 
