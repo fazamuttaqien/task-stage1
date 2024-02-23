@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins";
+}
+
+/* navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f3f3;
+  padding: 15px 80px;
+  align-items: center;
+}
+
+nav .nav-left ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+nav .nav-left ul img {
+  margin-right: 40px;
+}
+
+nav .nav-left ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav .nav-left ul li {
+  list-style-type: none;
+  margin-right: 25px;
+}
+
+nav .nav-right a {
+  text-decoration: none;
+  background-color: #111727;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.hamburger-bars {
+  display: none;
+}
+
+.hamburger-bars-items {
+  display: none;
+}
+
+.hamburger-bars-items a {
+  display: flex;
+  background-color: rgb(240, 218, 218);
+  color: black;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hamburger-bars-items a.active {
+  background-color: rgb(231, 124, 124);
+}
+
+/* Form Submission */
+.main_input_contact {
+  background-color: #e3e7eb;
+  overflow: auto;
+}
+
+.container_input_contact {
+  background-color: blue;
+  width: 550px;
+  margin: 70px auto;
+}
+
+.container_input_contact h1 {
+  /* background-color: green; */
+  padding-top: 20px;
+  text-align: center;
+}
+
+.container_form {
+  /* background-color: pink; */
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 20px;
+}
+
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 2px;
+  border: none;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form div {
+  margin-top: 15px;
+}
+
+.contact_button button {
+  background-color: #111727;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.contact_button {
+  display: flex;
+  justify-content: end;
+}
+
+@media screen and (max-width: 640px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  .collapse-item {
+    display: none;
+  }
+
+  .hamburger-bars {
+    display: block;
+  }
+
+  .container_input_contact {
+    width: 100%;
+  }
+}

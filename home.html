@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+
+    <!-- style css -->
+    <link rel="stylesheet" href="./assets/css/home.css" />
+
+    <!-- script font awesome -->
+    <script
+      src="https://kit.fontawesome.com/b9d0ad08e2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <!-- left navbar -->
+      <div class="nav-left">
+        <ul>
+          <img src="./assets/image/logo.png" alt="logo" />
+          <li class="collapse-item">
+            <a href="./home.html">Home</a>
+          </li>
+          <li class="collapse-item">
+            <a href="./blog.html">My Project</a>
+          </li>
+        </ul>
+      </div>
+      <!-- right navbar -->
+      <div class="nav-right collapse-item">
+        <a href="./contact.html">Contact Me</a>
+      </div>
+
+      <div class="nav-right hamburger-bars">
+        <button
+          style="background-color: transparent; border: none; cursor: pointer"
+          onclick="openHamburger()"
+        >
+          <i class="fa-solid fa-bars fa-2xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hamburger-bars-items" id="hamburger-bars-items">
+      <a href="./home.html" class="active">Home</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./contact.html">Contact</a>
+    </div>
+
+    <div class="container_profile">
+      <div class="content">
+        <h2>Hi Welcome to my hut</h2>
+
+        <p class="content_message">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum. Duis aute irure
+          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+          nulla pariatur.
+        </p>
+
+        <div class="content_contact">
+          <button>contact</button>
+          <p>download CV</p>
+          <a
+            href="https://drive.google.com/file/d/1p__HdE0rlzki-Pym2qNtqYWvuht36PJ2/view?usp=drive_link"
+            download
+          >
+            <i class="fa-solid fa-download fa-xl"></i>
+          </a>
+        </div>
+
+        <div class="content_socialmedia">
+          <a href="https://www.linkedin.com">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/faza.mttqn">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+          <a href="https://id-id.facebook.com">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+          <a href="https://twitter.com/fazamttqn">
+            <i class="fa-brands fa-square-x-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="profile">
+        <div class="profile_card">
+          <img src="./assets/image/person.jpg" alt="person" />
+          <div class="profile_details">
+            <h2>Rhoma Irama</h2>
+            <p>Fullstack Developer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

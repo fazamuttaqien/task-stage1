@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BLOG</title>
 
-    <link rel="stylesheet" href="./assets/css/style_blog.css" />
+    <link rel="stylesheet" href="./assets/css/blog.css" />
 
     <!-- script font awesome -->
     <script
@@ -16,127 +16,135 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <div class="left">
+      <!-- left navbar -->
+      <div class="nav-left">
         <ul>
           <img src="./assets/image/logo.png" alt="logo" />
-          <li>
-            <a href="./index.html">Home</a>
+          <li class="collapse-item">
+            <a href="./home.html">Home</a>
           </li>
-          <li class="active">
+          <li class="collapse-item">
             <a href="./blog.html">My Project</a>
           </li>
         </ul>
       </div>
-
-      <div class="right">
+      <!-- right navbar -->
+      <div class="nav-right collapse-item">
         <a href="./contact.html">Contact Me</a>
+      </div>
+
+      <div class="nav-right hamburger-bars">
+        <button
+          style="background-color: transparent; border: none; cursor: pointer"
+          onclick="openHamburger()"
+        >
+          <i class="fa-solid fa-bars fa-2xl"></i>
+        </button>
       </div>
     </nav>
 
+    <div class="hamburger-bars-items" id="hamburger-bars-items">
+      <a href="./home.html">Home</a>
+      <a href="./blog.html" class="active">Blog</a>
+      <a href="./contact.html">Contact</a>
+    </div>
+
     <!-- ADD PROJECT -->
-    <div class="container">
-      <h1>ADD MY PROJECT</h1>
-
-      <div class="container-form">
-        <form onsubmit="addBlog(event)">
-          <!-- Project Name -->
-          <div class="title">
-            <!-- title-->
-            <label for="input-title">Project Name</label>
-            <input type="text" id="input-title" />
-          </div>
-
-          <!-- Date -->
-          <div class="date">
-            <!-- date-->
-            <div class="start-date">
-              <label for="input-start-date">Start Date</label>
-              <input type="date" id="input-start-date" />
+    <div class="main-input-project">
+      <div class="container-input-project">
+        <h1>ADD MY PROJECT</h1>
+        <!-- container form -->
+        <div class="container-form">
+          <form onsubmit="addBlog(event)">
+            <!-- title project -->
+            <div class="title">
+              <label for="input-title">Project Name</label>
+              <input type="text" id="input-title" />
             </div>
-            <div class="end-date">
-              <label for="input-end-date">End Date</label>
-              <input type="date" id="input-end-date" />
-            </div>
-          </div>
 
-          <!-- Description -->
-          <div class="description">
-            <!-- description-->
-            <label for="input-blog-description">Description</label>
-            <textarea id="input-blog-description"></textarea>
-          </div>
-
-          <!-- Technologies -->
-          <div class="tech">
-            <!-- tech-->
-            <label>Technologies</label>
-            <div class="tech-checkbox">
-              <div>
-                <input
-                  type="checkbox"
-                  id="checkbox-reactjs"
-                  name="tech-icon"
-                  value="fa-brands fa-react"
-                />
-                <label>React JS</label>
+            <!-- date project -->
+            <div class="date">
+              <div class="start-date">
+                <label for="input-start-date">Start Date</label>
+                <input type="date" id="input-start-date" />
               </div>
-              <div>
-                <input
-                  type="checkbox"
-                  id="checkbox-nodejs"
-                  name="tech-icon"
-                  value="fa-brands fa-node-js"
-                />
-                <label>Node JS</label>
-              </div>
-              <div>
-                <input
-                  type="checkbox"
-                  id="checkbox-java"
-                  name="tech-icon"
-                  value="fa-brands fa-java"
-                />
-                <label>Java</label>
-              </div>
-              <div>
-                <input
-                  type="checkbox"
-                  id="checkbox-javascript"
-                  name="tech-icon"
-                  value="fa-brands fa-js"
-                />
-                <label>Javascript</label>
+              <div class="end-date">
+                <label for="input-end-date">End Date</label>
+                <input type="date" id="input-end-date" />
               </div>
             </div>
-          </div>
 
-          <!-- Upload Image -->
-          <div class="upload-image">
-            <!-- images-->
-            <label for="input-file-image">choose</label>
-            <input type="file" id="input-file-image" name="filename" hidden />
-            <i class="fa-solid fa-paperclip"> </i>
-          </div>
+            <!-- description -->
+            <div class="description">
+              <label for="input-description">Description</label>
+              <textarea id="input-description"></textarea>
+            </div>
 
-          <!-- Submit -->
-          <div class="submit-btn">
-            <button type="submit">submit</button>
-          </div>
-        </form>
+            <!-- technologies -->
+            <div class="technologies">
+              <label>Technologies</label>
+              <div class="tech-checkbox">
+                <div>
+                  <input
+                    type="checkbox"
+                    name="tech-icon"
+                    value="fa-brands fa-react fa-2xl"
+                  />
+                  <label>React JS</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="tech-icon"
+                    value="fa-brands fa-node-js fa-2xl"
+                  />
+                  <label>Node JS</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="tech-icon"
+                    value="fa-brands fa-java fa-2xl"
+                  />
+                  <label>Java</label>
+                </div>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="tech-icon"
+                    value="fa-brands fa-js fa-2xl"
+                  />
+                  <label>Javascript</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- upload image -->
+            <div class="upload-image">
+              <label for="input-file-image">choose</label>
+              <input type="file" id="input-file-image" name="filename" />
+              <i class="fa-solid fa-paperclip"></i>
+            </div>
+
+            <!-- submit -->
+            <div class="submit-btn">
+              <button type="submit">submit</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
 
     <!-- PROJECT LIST -->
-    <div class="container-project-list">
-      <div class="container-blog">
-        <h1>MY PROJECT</h1>
-        <div class="blog-card" id="blog-card">
-          <!-- dynamic content would be here -->
-        </div>
+    <div class="main_project_list">
+      <h1>MY PROJECT LIST</h1>
+      <div class="cards" id="cards">
+        <!-- dynamic content would be here -->
       </div>
     </div>
 
     <!-- scrip blog js -->
     <script src="./assets/js/blog.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

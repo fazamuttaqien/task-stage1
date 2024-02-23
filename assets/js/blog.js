@@ -6,7 +6,7 @@ function addBlog(event) {
   let title = document.getElementById("input-title").value;
   let startDate = document.getElementById("input-start-date").value;
   let endDate = document.getElementById("input-end-date").value;
-  let description = document.getElementById("input-blog-description").value;
+  let description = document.getElementById("input-description").value;
   let techCheckbox = [
     ...document.querySelectorAll("input[name='tech-icon']:checked"),
   ];
@@ -40,7 +40,7 @@ function addBlog(event) {
 }
 
 function renderBlog() {
-  document.getElementById("blog-card").innerHTML = "";
+  document.getElementById("cards").innerHTML = "";
 
   for (let index = 0; index < dataBlogs.length; index++) {
     // let icons = ``;
@@ -60,29 +60,37 @@ function renderBlog() {
     //   icons += `<i class="fa-brands fa-js"></i>`;
     // }
 
-    // let bulan = 0;
-    // bulan = Math.abs(dataBlogs[index].endDate - dataBlogs[index].startDate);
-    // console.log(`bulan : ${bulan}`);
+    // <a href="./blog-details.html?id=${index}">
+    //   </a>
+    document.getElementById("cards").innerHTML += `
+    <div class="cards_item">
+      <div class="card">
+          <!-- card image -->
+          <div class="card_image">
+            <img src="./assets/image/blog-images/image-1.jpg" />
+          </div>
 
-    document.getElementById("blog-card").innerHTML += `
-    <div class="card">
-      <a href="./blog-details.html?id=${index}">
-        <img src="./assets/image/blog-images/image-1.jpg" alt="" />
-        <p class="card-title">${dataBlogs[index].title}</p>
-        <p class="card-duration">duration : ${getFullDate(
-          dataBlogs[index].valueStartDate,
-          dataBlogs[index].valueEndDate
-        )}</p>
-        <div class="card-content">
-          <p>${dataBlogs[index].description}</p>
-        </div>
-        <div class="card-icon">${dataBlogs[index].tech
-          .map((item) => `<i class='${item}'></i>`)
-          .join("")}</div>
-      </a>
-      <div class="card-btn">
-        <button>edit</button>
-        <button>delete</button>
+          <!-- card content -->
+          <div class="card_content">
+            <h2 class="card_title">${dataBlogs[index].title}</h2>
+            <p class="card_duration">duration : ${getFullDate(
+                dataBlogs[index].valueStartDate,
+                dataBlogs[index].valueEndDate
+            )}</p>
+            <p class="card_description">${dataBlogs[index].description}</p>
+          </div>
+
+          <!-- card icon -->
+          <div class="card_icon">${dataBlogs[index].tech
+            .map((item) => `<i class='${item}'></i>`)
+            .join("")}
+          </div>
+
+          <!-- card button -->
+          <div class="card_button">
+            <button>edit</button>
+            <button>delete</button>
+          </div>
       </div>
     </div>
     `;

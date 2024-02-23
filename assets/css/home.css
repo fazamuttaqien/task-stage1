@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f4f3f3;
+  padding: 15px 80px;
+  align-items: center;
+}
+
+nav .nav-left ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+nav .nav-left ul img {
+  margin-right: 40px;
+}
+
+nav .nav-left ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav .nav-left ul li {
+  list-style-type: none;
+  margin-right: 25px;
+}
+
+nav .nav-right a {
+  text-decoration: none;
+  background-color: #111727;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.hamburger-bars {
+  display: none;
+}
+
+.hamburger-bars-items {
+  display: none;
+}
+
+.hamburger-bars-items a {
+  display: flex;
+  background-color: rgb(240, 218, 218);
+  color: black;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hamburger-bars-items a.active {
+  background-color: rgb(231, 124, 124);
+}
+
+/* container profile */
+.container_profile {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 80px;
+  box-shadow: 2px 2px 10px 2px lightgrey;
+  border-radius: 10px;
+}
+
+/* content */
+.content {
+  padding: 20px;
+  width: 60%;
+}
+
+.content h2 {
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.content_message {
+  text-align: justify;
+}
+
+.content_contact {
+  margin: 50px auto;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.content_contact button {
+  padding: 10px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 20px;
+  color: white;
+  background-color: #111727;
+}
+
+.content_contact a {
+  text-decoration: none;
+  color: black;
+}
+
+.content_socialmedia {
+  display: flex;
+  gap: 40px;
+}
+
+.content_socialmedia a {
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+}
+
+/* profile */
+.profile {
+  width: 40%;
+  margin: auto;
+}
+
+.profile_card {
+  width: 70%;
+  height: 90%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px 2px lightgrey;
+}
+
+.profile img {
+  width: 100%;
+  aspect-ratio: 1/1.2;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.profile_details h2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile_details p {
+  text-align: center;
+}
+
+@media screen and (max-width: 47rem) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  .collapse-item {
+    display: none;
+  }
+
+  .hamburger-bars {
+    display: block;
+  }
+
+  .container_profile {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .content,
+  .profile {
+    width: 100%;
+  }
+
+  .content_socialmedia {
+    justify-content: center;
+  }
+}

@@ -5,33 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CONTACT</title>
 
-    <!-- style css -->
-    <link rel="stylesheet" href="./assets/css/style_contact.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+
+    <script
+      src="https://kit.fontawesome.com/b9d0ad08e2.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <!-- Navbar -->
     <nav>
-      <div class="left">
+      <!-- left navbar -->
+      <div class="nav-left">
         <ul>
           <img src="./assets/image/logo.png" alt="logo" />
-          <li>
-            <a href="./index.html">Home</a>
+          <li class="collapse-item">
+            <a href="./home.html">Home</a>
           </li>
-          <li>
+          <li class="collapse-item">
             <a href="./blog.html">My Project</a>
           </li>
         </ul>
       </div>
-
-      <div class="right">
+      <!-- right navbar -->
+      <div class="nav-right collapse-item">
         <a href="./contact.html">Contact Me</a>
+      </div>
+
+      <div class="nav-right hamburger-bars">
+        <button
+          style="background-color: transparent; border: none; cursor: pointer"
+          onclick="openHamburger()"
+        >
+          <i class="fa-solid fa-bars fa-2xl"></i>
+        </button>
       </div>
     </nav>
 
-    <h1>GET IT TOUCH</h1>
+    <div class="hamburger-bars-items" id="hamburger-bars-items">
+      <a href="./home.html">Home</a>
+      <a href="./blog.html">Blog</a>
+      <a href="./contact.html" class="active">Contact</a>
+    </div>
 
-    <!-- Form contact -->
+    <!-- GET IT TOUCH -->
+    <div class="main_input_contact">
+      <div class="container_input_contact">
+        <h1>GET IT TOUCH</h1>
+        <!-- container form -->
+        <div class="container_form">
+          <form>
+            <!-- name contact -->
+            <div class="name">
+              <label>Name</label>
+              <input type="text" placeholder="Type your name ..." />
+            </div>
+
+            <!-- email contact -->
+            <div class="email">
+              <label>Email</label>
+              <input type="text" placeholder="Type your email ..." />
+            </div>
+
+            <!-- phone number contact -->
+            <div class="phone_number">
+              <label>Phone Number</label>
+              <input type="text" placeholder="Type your phone number ..." />
+            </div>
+
+            <!-- subject contact -->
+            <div class="subject_contact">
+              <label>Subject</label>
+              <select id="subject">
+                <option hidden></option>
+                <option>Fullstack Engineer</option>
+                <option>DevOps Engineer</option>
+              </select>
+            </div>
+
+            <!-- message contact -->
+            <div class="message_contact">
+              <label>Your message</label>
+              <textarea id="message"></textarea>
+            </div>
+
+            <!-- button contact -->
+            <div class="contact_button">
+              <button type="button" onclick="getData()">submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- <h1>GET IT TOUCH</h1>
     <form>
       <div>
         <label>Name</label>
@@ -65,8 +133,7 @@
       <div>
         <button type="button" onclick="getData()">submit</button>
       </div>
-    </form>
-  </body>
+    </form> -->
 
   <script src="./assets/js/script.js"></script>
 </html>
