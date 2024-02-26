@@ -10,6 +10,7 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
 /* navbar */
 nav {
   display: flex;
@@ -182,6 +183,10 @@ nav .nav-right a {
   .content,
   .profile {
     width: 100%;
+  }
+
+  .content h2 {
+    text-align: center;
   }
 
   .content_socialmedia {

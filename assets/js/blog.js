@@ -67,7 +67,7 @@ function renderBlog() {
       <div class="card">
           <!-- card image -->
           <div class="card_image">
-            <img src="./assets/image/blog-images/image-1.jpg" />
+            <img src="./assets/image/blog/image-1.jpg" />
           </div>
 
           <!-- card content -->
