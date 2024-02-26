@@ -35,6 +35,7 @@ class Testimonial {
 
 class Author extends Testimonial {
   #author = "";
+
   constructor(author, quote, image) {
     super(quote, image);
     this.#author = author;
